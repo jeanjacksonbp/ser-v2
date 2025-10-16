@@ -1,0 +1,18 @@
+# Composer
+/vendor/
+/composer.phar
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# IDE/OS
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
+
+# Cache/temp
+/tmp/
+.cache/

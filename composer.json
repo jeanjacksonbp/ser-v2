@@ -1,0 +1,20 @@
+{
+  "name": "jeanjacksonbp/ser-v2",
+  "description": "SER v2 Starter (PHP 8.3 + MySQL, RBAC+ABAC)",
+  "type": "project",
+  "require": {
+    "php": "^8.0",
+    "vlucas/phpdotenv": "^5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "scripts": {
+    "serve": "php -S 127.0.0.1:8000 -t public"
+  },
+  "config": {
+    "process-timeout": 0
+  }
+}
