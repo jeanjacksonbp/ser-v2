@@ -1,43 +1,10 @@
+
 <?php
 declare(strict_types=1);
 require __DIR__ . '/../bootstrap/app.php';
 
-// Processar URI - versão simplificada e robusta
-$requestUri = $_SERVER['REQUEST_URI'] ?? '/';
-
-// Remove query string
-$uri = strtok($requestUri, '?');
-
-// Remove trailing slash (exceto para root)
-if ($uri !== '/' && substr($uri, -1) === '/') {
-    $uri = rtrim($uri, '/');
-}
-
-// Se acessado via /ser-v2/public/, remove esse prefixo
-if (strpos($uri, '/ser-v2/public') === 0) {
-    $uri = substr($uri, strlen('/ser-v2/public'));
-    if (empty($uri)) {
-        $uri = '/';
-    }
-}
-
+$uri = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
-
-// Debug temporário - remover depois
-if (isset($_GET['debug']) || $uri === '/debug') {
-    echo "<h1>Debug Sistema</h1>";
-    echo "<p>REQUEST_URI original: " . ($_SERVER['REQUEST_URI'] ?? 'N/A') . "</p>";
-    echo "<p>URI processado: '$uri'</p>";
-    echo "<p>Method: $method</p>";
-    echo "<hr>";
-    if ($uri === '/login') {
-        echo "<p style='color: green;'>✅ Login será reconhecido</p>";
-    } else {
-        echo "<p style='color: red;'>❌ Login NÃO será reconhecido</p>";
-    }
-    echo "<p><a href='login'>Testar link login</a></p>";
-    exit;
-}
 
 /** LOGIN (GET) */
 if ($uri === '/login' && $method === 'GET') {
