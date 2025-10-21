@@ -19,8 +19,14 @@ final class Bootstrap
         if (!defined('VIEW_PATH'))   define('VIEW_PATH',   APP_ROOT . '/resources/views');
         if (!defined('APP_PATH'))    define('APP_PATH',    APP_ROOT . '/app');
 
-        // Sessão
-        if (session_status() === PHP_SESSION_NONE) session_start();
+        // Sessão (apenas para web, não CLI ou APIs)
+        if (
+            session_status() === PHP_SESSION_NONE &&
+            PHP_SAPI !== 'cli' &&
+            !(isset($_SERVER['REQUEST_URI']) && str_starts_with($_SERVER['REQUEST_URI'], '/api'))
+        ) {
+            session_start();
+        }
 
         // .env simples (se houver)
         $env = APP_ROOT.'/.env';
