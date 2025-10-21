@@ -1,0 +1,20 @@
+# Forçar uso do index.php
+DirectoryIndex index.php index.html
+
+# Configuração para PHP
+<Files "index.php">
+    ForceType application/x-httpd-php
+</Files>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Se acessar a raiz, redireciona para index.php
+    RewriteRule ^$ index.php [L]
+    
+    # Se não for arquivo ou diretório existente, redireciona para public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/ser-v2/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

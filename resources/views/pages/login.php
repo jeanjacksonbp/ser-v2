@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Login — SER</title>
-  <link rel="stylesheet" href="/assets/css/auth.css" />
+  <link rel="stylesheet" href="<?= asset('css/auth.css') ?>" />
 </head>
 <body>
   <div class="auth-wrap">
@@ -25,7 +25,7 @@
         <div class="error"><?= htmlspecialchars($_GET['err']) ?></div>
       <?php endif; ?>
 
-      <form method="post" action="/login">
+      <form method="post" action="<?= url('login') ?>">
         <div class="form-field">
           <label class="label" for="email">E-mail</label>
           <input class="input" type="email" id="email" name="email" required autofocus />
