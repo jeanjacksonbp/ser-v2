@@ -12,6 +12,8 @@ DirectoryIndex index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php [QSA,L]
+    # mapear /login -> /login.php
+RewriteRule ^login$ login.php [L]
 </IfModule>
 
 # Fallback for servers without mod_rewrite

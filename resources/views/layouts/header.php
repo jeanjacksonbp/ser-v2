@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SER v2</title>
-  <link rel="stylesheet" href="<?= asset('app.css') ?>" />
+  <link rel="stylesheet" href="<?= asset('css/app.css') ?>" />
 </head>
-<body>
+<body
 <header>
   <h1>SER v2</h1>
   <nav>
