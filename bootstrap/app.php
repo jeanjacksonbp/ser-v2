@@ -28,3 +28,19 @@ $mw->handle(fn () => null);
 
 $GLOBALS['pdo'] = $pdo;
 $GLOBALS['guard'] = new App\Core\Auth\Guard($pdo);
+
+// Helper function para URLs
+if (!function_exists('url')) {
+    function url(string $path = ''): string {
+        $baseUrl = $_ENV['APP_URL'] ?? 'http://localhost';
+        $path = ltrim($path, '/');
+        return rtrim($baseUrl, '/') . '/' . $path;
+    }
+}
+
+// Helper function para assets
+if (!function_exists('asset')) {
+    function asset(string $path = ''): string {
+        return url('assets/' . ltrim($path, '/'));
+    }
+}

@@ -2,6 +2,7 @@
 
 Para configurar corretamente o acesso sem /public/, você pode:
 
+
 ## Opção 1: Virtual Host (Recomendado)
 
 1. Edite o arquivo: C:\xampp\apache\conf\extra\httpd-vhosts.conf
