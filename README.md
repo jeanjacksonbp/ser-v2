@@ -1,4 +1,4 @@
-# SER v2 — Starter (PHP 8.3 + MySQL)
+# SER v2 — Starter (PHP 8.0 + MySQL)
 
 Reinício limpo com layout consistente, **src/**, **public/**, **resources/views/**, e autorização **RBAC+ABAC**.
 
