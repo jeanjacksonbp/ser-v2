@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://digikalc.com/</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://digikalc.com/?lang=pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://digikalc.com/?lang=en-US"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://digikalc.com/?lang=es-ES"/>
+  </url>
+  
+  <!-- Lei de Ohm Calculator -->
+  <url>
+    <loc>https://digikalc.com/tools/ohms-law.html</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://digikalc.com/tools/ohms-law.html?lang=pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://digikalc.com/tools/ohms-law.html?lang=en-US"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://digikalc.com/tools/ohms-law.html?lang=es-ES"/>
+  </url>
+  
+  <!-- Engine Displacement Calculator -->
+  <url>
+    <loc>https://digikalc.com/tools/engine-displacement.html</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://digikalc.com/tools/engine-displacement.html?lang=pt-BR"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://digikalc.com/tools/engine-displacement.html?lang=en-US"/>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://digikalc.com/tools/engine-displacement.html?lang=es-ES"/>
+  </url>
+  
+</urlset>

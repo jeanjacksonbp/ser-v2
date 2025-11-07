@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard · SER v2</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+  <header class="header-blur position-sticky top-0 w-100" style="height:72px; z-index:1030;">
+    <div class="container-fluid h-100 d-flex align-items-center justify-content-between px-3">
+      <div class="d-flex align-items-center gap-2">
+        <!-- Hamburger Menu (Mobile/Tablet) -->
+        <button class="hamburger-menu" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <span class="fs-4 fw-bold">SER v2</span>
+        <span class="badge rounded-pill badge-ser">Implantação</span>
+      </div>
+      <div class="text-end">
+        <i class="fa-solid fa-user-circle"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay para mobile -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-12 col-lg-3 col-xl-2 sidebar p-3" id="sidebar">
+        <!-- Toggle Button -->
+        <div class="sidebar-toggle" id="sidebarToggle">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        
+        <div class="mb-2 text-uppercase small opacity-75 sidebar-title">Módulos</div>
+        <ul class="nav nav-pills flex-column">
+          
+          <li class="nav-item my-1">
+            <a class="nav-link active fw-semibold" href="index.html" title="Dashboard">
+              <i class="fa-solid fa-house"></i>
+              <span class="nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="nav-item my-1">
+            <a class="nav-link" href="diagnostico.html" title="Diagnóstico">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span class="nav-text">Diagnóstico</span>
+            </a>
+          </li>
+
+          <li class="nav-item my-1">
+            <a class="nav-link" href="planejamento.html" title="Planejamento">
+              <i class="fa-solid fa-bullseye"></i>
+              <span class="nav-text">Planejamento</span>
+            </a>
+          </li>
+
+          <li class="nav-item my-1">
+            <a class="nav-link" href="comites.html" title="Comitês e Atas">
+              <i class="fa-solid fa-users"></i>
+              <span class="nav-text">Comitês e Atas</span>
+            </a>
+          </li>
+
+          <li class="nav-item my-1">
+            <a class="nav-link" href="kpis.html" title="KPIs">
+              <i class="fa-solid fa-chart-line"></i>
+              <span class="nav-text">KPIs</span>
+            </a>
+          </li>
+
+          <li class="nav-item my-1">
+            <a class="nav-link" href="feedback.html" title="Feedback e Cultura">
+              <i class="fa-solid fa-comments"></i>
+              <span class="nav-text">Feedback e Cultura</span>
+            </a>
+          </li>
+
+          <li class="nav-item my-1">
+            <a class="nav-link" href="avaliacao.html" title="Avaliação">
+              <i class="fa-solid fa-rotate"></i>
+              <span class="nav-text">Avaliação</span>
+            </a>
+          </li>
+        </ul>
+        <div class="mt-4 small opacity-75">Dica: use estes HTMLs como protótipo navegável; depois integramos ao SER (PHP).</div>
+      </nav>
+      <main class="col-12 col-lg-9 col-xl-10 main-content p-3 p-md-4">
+        
+  <div class="row g-3">
+    <div class="col-md-6 col-xl-4">
+      <div class="card card-ser p-3 h-100">
+        <div class="d-flex align-items-center justify-content-between">
+          <h5 class="mb-2">Acesso rápido</h5>
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <ul class="mb-3">
+          <li><a href="diagnostico.html">Diagnóstico Organizacional</a></li>
+          <li><a href="planejamento.html">Planejamento Estratégico</a></li>
+          <li><a href="comites.html">Comitês e Atas</a></li>
+          <li><a href="kpis.html">KPIs e Indicadores</a></li>
+          <li><a href="feedback.html">Feedback e Cultura</a></li>
+          <li><a href="avaliacao.html">Avaliação e Melhoria Contínua</a></li>
+        </ul>
+        <a class="btn btn-ser" href="diagnostico.html"><i class="fa-solid fa-arrow-right"></i> Começar por Diagnóstico</a>
+      </div>
+    </div>
+    <div class="col-md-6 col-xl-8">
+      <div class="card card-ser p-3 h-100">
+        <h5 class="mb-2">Visão do Programa</h5>
+        <p>O SER v2 orienta a implantação da Gestão Participativa e de Alto Desempenho. Use os módulos ao lado para avançar nas etapas do método. Todas as ações terão trilha de auditoria quando integradas ao backend.</p>
+        <div class="row g-3">
+          <div class="col-md-4"><div class="card card-ser p-3"><div class="small opacity-75">Status</div><div class="fs-4 fw-bold">Piloto</div></div></div>
+          <div class="col-md-4"><div class="card card-ser p-3"><div class="small opacity-75">Comitês</div><div class="fs-4 fw-bold">3 ativos</div></div></div>
+          <div class="col-md-4"><div class="card card-ser p-3"><div class="small opacity-75">KPIs</div><div class="fs-4 fw-bold">12 definidos</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <div class="mt-4 footer-note">© SER v2 · Layout estático para navegação local</div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sidebar Toggle para index.html
+    document.addEventListener('DOMContentLoaded', function() {
+      const sidebar = document.getElementById('sidebar');
+      const toggleBtn = document.getElementById('sidebarToggle');
+      
+      if (!sidebar || !toggleBtn) return;
+      
+      // Aplicar estado imediatamente se salvo no localStorage
+      const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+      if (isCollapsed) {
+        sidebar.classList.add('preload-collapsed', 'collapsed');
+        // Forçar reflow e remover classe preload após aplicar
+        sidebar.offsetHeight;
+        setTimeout(() => {
+          sidebar.classList.remove('preload-collapsed');
+        }, 50);
+      }
+      
+      const toggleIcon = toggleBtn.querySelector('i');
+      
+      // Função para aplicar estilos aos ícones
+      function applyIconStyles(collapsed) {
+        const navLinks = sidebar.querySelectorAll('.nav-link');
+        const icons = sidebar.querySelectorAll('.nav-link i');
+        
+        navLinks.forEach(link => {
+          if (collapsed) {
+            link.style.justifyContent = 'flex-start';
+            link.style.paddingLeft = '12px';
+            link.style.paddingRight = '12px';
+          } else {
+            link.style.justifyContent = '';
+            link.style.paddingLeft = '';
+            link.style.paddingRight = '';
+          }
+        });
+        
+        icons.forEach(icon => {
+          if (collapsed) {
+            icon.style.margin = '0';
+            icon.style.marginRight = '0';
+            icon.style.marginLeft = '0';
+            icon.style.textAlign = 'left';
+          } else {
+            icon.style.margin = '';
+            icon.style.marginRight = '0.5rem';
+            icon.style.marginLeft = '';
+            icon.style.textAlign = '';
+          }
+        });
+      }
+      
+      // Aplicar estado dos ícones se já colapsado
+      if (isCollapsed) {
+        toggleIcon.className = 'fa-solid fa-chevron-right';
+        applyIconStyles(true);
+      }
+
+      // Event listener para o botão toggle
+      toggleBtn.addEventListener('click', function() {
+        sidebar.classList.toggle('collapsed');
+        
+        if (sidebar.classList.contains('collapsed')) {
+          toggleIcon.className = 'fa-solid fa-chevron-right';
+          localStorage.setItem('sidebarCollapsed', 'true');
+          applyIconStyles(true);
+        } else {
+          toggleIcon.className = 'fa-solid fa-chevron-left';
+          localStorage.setItem('sidebarCollapsed', 'false');
+          applyIconStyles(false);
+        }
+      });
+      
+      // Inicializar menu mobile para Dashboard
+      initializeMobileMenu();
+    });
+    
+    function initializeMobileMenu() {
+      const hamburgerMenu = document.getElementById('hamburgerMenu');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      const navLinks = document.querySelectorAll('.sidebar .nav-link');
+      
+      if (!hamburgerMenu || !sidebar || !overlay) return;
+      
+      hamburgerMenu.addEventListener('click', () => {
+        const isOpen = sidebar.classList.contains('show');
+        
+        if (isOpen) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
+      });
+      
+      overlay.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          setTimeout(() => {
+            closeMobileMenu();
+          }, 150);
+        });
+      });
+    }
+    
+    function openMobileMenu() {
+      const hamburgerMenu = document.getElementById('hamburgerMenu');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      
+      hamburgerMenu.classList.add('active');
+      sidebar.classList.add('show');
+      overlay.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMobileMenu() {
+      const hamburgerMenu = document.getElementById('hamburgerMenu');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      
+      hamburgerMenu.classList.remove('active');
+      sidebar.classList.remove('show');
+      overlay.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>

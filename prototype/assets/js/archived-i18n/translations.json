@@ -1,0 +1,418 @@
+{
+  "pt": {
+    "common": {
+      "save": "Salvar",
+      "cancel": "Cancelar",
+      "edit": "Editar",
+      "delete": "Excluir",
+      "back": "Voltar",
+      "loading": "Carregando...",
+      "error": "Erro",
+      "success": "Sucesso",
+      "confirm": "Confirmar",
+      "close": "Fechar",
+      "search": "Pesquisar",
+      "filter": "Filtrar",
+      "export": "Exportar",
+      "import": "Importar",
+      "add": "Adicionar",
+      "remove": "Remover",
+      "warning": "Aviso",
+      "info": "Informação",
+      "language": "Idioma"
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "usuarios": "Usuários",
+      "relatorios": "Relatórios",
+      "configuracoes": "Configurações",
+      "sair": "Sair"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "diagnostico": "Diagnóstico",
+      "planejamento": "Planejamento",
+      "comites": "Comitês e Atas",
+      "kpis": "KPIs",
+      "feedback": "Feedback e Cultura",
+      "avaliacao": "Avaliação",
+      "modules": "Módulos"
+    },
+    "header": {
+      "title": "SER v2",
+      "subtitle": "Implantação",
+      "language": "Idioma",
+      "user_menu": "Menu do usuário"
+    },
+    "pages": {
+      "dashboard": {
+        "title": "Dashboard",
+        "quick_access": "Acesso rápido",
+        "program_vision": "Visão do Programa",
+        "description": "O SER v2 orienta a implantação da Gestão Participativa e de Alto Desempenho. Use os módulos ao lado para avançar nas etapas do método.",
+        "status": "Status",
+        "pilot": "Piloto",
+        "start_diagnosis": "Começar por Diagnóstico"
+      },
+      "diagnostico": {
+        "title": "Diagnóstico Organizacional",
+        "objective": "Objetivo",
+        "objective_desc": "Avaliar a prontidão cultural e estrutural para a Gestão Participativa.",
+        "tools": "Ferramentas",
+        "tools_list": [
+          "Pesquisa de engajamento/clima",
+          "Análise SWOT",
+          "Entrevistas e 360° da liderança"
+        ],
+        "result": "Resultado",
+        "result_desc": "Plano de ação inicial priorizado por impacto × esforço.",
+        "engagement": "Engajamento",
+        "leadership": "Liderança",
+        "structure": "Estrutura",
+        "intermediate": "Intermediário",
+        "basic": "Básica",
+        "go_to_planning": "Ir para Planejamento"
+      },
+      "planejamento": {
+        "title": "Planejamento Estratégico",
+        "objective": "Objetivo",
+        "objective_desc": "Definir metas e ações com participação coletiva (OKR + Canvas).",
+        "resources": "Recursos",
+        "resources_list": [
+          "Canvas Estratégico (7 blocos)",
+          "Metas SMART e responsáveis",
+          "Roadmap e comunicação"
+        ],
+        "smart_goals": "Exemplo de Metas SMART",
+        "goal_01": "Aumentar engajamento em 15% em 12 meses",
+        "goal_02": "Reduzir lead-time de entrega em 20% até Q4",
+        "quarterly_measurement": "Medição trimestral · Owner: RH",
+        "monthly_measurement": "Medição mensal · Owner: Operações",
+        "link_committees": "Vincular a Comitês",
+        "back_dashboard": "Voltar ao Dashboard"
+      },
+      "comites": {
+        "title": "Comitês e Atas",
+        "objective": "Objetivo",
+        "objective_desc": "Estruturar decisões com transparência e responsabilidade.",
+        "functions": "Funções",
+        "functions_list": [
+          "Criar comitês (inovação, qualidade, vendas...)",
+          "Registrar atas e pareceres",
+          "Aprovação da diretoria + auditoria"
+        ],
+        "meeting_info": "Reuniões com 3–5 membros, agenda trimestral e envio de atas em 24h.",
+        "active_committees": "Comitês ativos",
+        "new_committee": "Novo comitê"
+      },
+      "kpis": {
+        "title": "KPIs e Indicadores",
+        "objective": "Objetivo",
+        "objective_desc": "Mensurar desempenho e aprender com dados.",
+        "resources": "Recursos",
+        "resources_list": [
+          "KPIs por área/comitê",
+          "Lançamento de leituras",
+          "Painéis e Curva S"
+        ]
+      },
+      "feedback": {
+        "title": "Feedback e Cultura",
+        "objective": "Objetivo",
+        "objective_desc": "Cultivar uma cultura de feedback contínuo e melhoria.",
+        "tools": "Ferramentas",
+        "tools_list": [
+          "Pesquisas de clima organizacional",
+          "Sistema de feedback 360°",
+          "Reuniões de retrospectiva",
+          "Canais de sugestão anônima"
+        ],
+        "result": "Resultado",
+        "result_desc": "Ambiente de trabalho mais colaborativo e produtivo."
+      },
+      "avaliacao": {
+        "title": "Avaliação e Melhoria Contínua",
+        "objective": "Objetivo",
+        "objective_desc": "Fechar ciclos, ajustar rumos e comunicar resultados.",
+        "tools": "Ferramentas",
+        "tools_list": [
+          "Revisões trimestrais de metas",
+          "Análise de indicadores",
+          "Planos de ação corretiva",
+          "Comunicação de resultados"
+        ],
+        "result": "Resultado",
+        "result_desc": "Ciclo completo de melhoria contínua estabelecido."
+      }
+    },
+    "test": {
+      "title": "Teste Sistema Híbrido I18n",
+      "system_status": "Status do Sistema",
+      "initialization": "Inicialização",
+      "json_loading": "Carregamento JSON",
+      "current_mode": "Modo Atual",
+      "attempting": "Tentando...",
+      "fallback_active": "Fallback Ativo",
+      "initialized": "Inicializado",
+      "json_loaded_success": "JSON Carregado com Sucesso",
+      "using_fallback": "Usando Fallback",
+      "features_demo": "Demonstração de Funcionalidades",
+      "navigation": "Navegação",
+      "common_buttons": "Botões Comuns",
+      "search_field": "Campo de Busca",
+      "technical_info": "Informações Técnicas",
+      "system_details": "Detalhes do Sistema",
+      "current_language": "Idioma Atual",
+      "json_loaded": "JSON Carregado",
+      "available_languages": "Idiomas Disponíveis",
+      "translations_count": "Traduções Carregadas",
+      "operation_log": "Log de Operações",
+      "console_loading": "Carregando sistema...",
+      "dynamic_tests": "Testes Dinâmicos",
+      "add_content": "Adicionar Conteúdo Dinamicamente",
+      "add_elements": "Adicionar Elementos",
+      "clear_elements": "Limpar Elementos",
+      "dynamic_element": "Elemento Dinâmico"
+    },
+    "footer": {
+      "copyright": "© SER v2 · Layout estático para navegação local",
+      "tip": "Dica: use estes HTMLs como protótipo navegável; depois integramos ao SER (PHP)."
+    }
+  },
+  "en": {
+    "common": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "back": "Back",
+      "loading": "Loading...",
+      "error": "Error",
+      "success": "Success",
+      "confirm": "Confirm",
+      "close": "Close",
+      "search": "Search",
+      "filter": "Filter",
+      "export": "Export",
+      "import": "Import",
+      "add": "Add",
+      "remove": "Remove",
+      "warning": "Warning",
+      "info": "Information",
+      "language": "Language"
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "usuarios": "Users",
+      "relatorios": "Reports",
+      "configuracoes": "Settings",
+      "sair": "Logout"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "diagnostico": "Diagnosis",
+      "planejamento": "Planning",
+      "comites": "Committees & Minutes",
+      "kpis": "KPIs",
+      "feedback": "Feedback & Culture",
+      "avaliacao": "Evaluation",
+      "modules": "Modules"
+    },
+    "header": {
+      "title": "EPS v2",
+      "subtitle": "Implementation",
+      "language": "Language",
+      "user_menu": "User menu"
+    },
+    "pages": {
+      "dashboard": {
+        "title": "Dashboard",
+        "quick_access": "Quick access",
+        "program_vision": "Program Vision",
+        "description": "EPS v2 guides the implementation of Participative and High Performance Management. Use the modules on the side to advance through the method steps.",
+        "status": "Status",
+        "pilot": "Pilot",
+        "start_diagnosis": "Start with Diagnosis"
+      },
+      "diagnostico": {
+        "title": "Organizational Diagnosis",
+        "objective": "Objective",
+        "objective_desc": "Assess cultural and structural readiness for Participative Management.",
+        "tools": "Tools",
+        "tools_list": [
+          "Engagement/climate survey",
+          "SWOT Analysis",
+          "Leadership interviews and 360°"
+        ],
+        "result": "Result",
+        "result_desc": "Initial action plan prioritized by impact × effort.",
+        "engagement": "Engagement",
+        "leadership": "Leadership",
+        "structure": "Structure",
+        "intermediate": "Intermediate",
+        "basic": "Basic",
+        "go_to_planning": "Go to Planning"
+      },
+      "planejamento": {
+        "title": "Strategic Planning",
+        "objective": "Objective",
+        "objective_desc": "Define goals and actions with collective participation (OKR + Canvas).",
+        "resources": "Resources",
+        "resources_list": [
+          "Strategic Canvas (7 blocks)",
+          "SMART goals and responsible parties",
+          "Roadmap and communication"
+        ],
+        "smart_goals": "SMART Goals Example",
+        "goal_01": "Increase engagement by 15% in 12 months",
+        "goal_02": "Reduce delivery lead-time by 20% by Q4",
+        "quarterly_measurement": "Quarterly measurement · Owner: HR",
+        "monthly_measurement": "Monthly measurement · Owner: Operations",
+        "link_committees": "Link to Committees",
+        "back_dashboard": "Back to Dashboard"
+      }
+    },
+    "test": {
+      "title": "Hybrid I18n System Test",
+      "system_status": "System Status",
+      "initialization": "Initialization",
+      "json_loading": "JSON Loading",
+      "current_mode": "Current Mode",
+      "attempting": "Attempting...",
+      "fallback_active": "Fallback Active",
+      "initialized": "Initialized",
+      "json_loaded_success": "JSON Loaded Successfully",
+      "using_fallback": "Using Fallback",
+      "features_demo": "Features Demonstration",
+      "navigation": "Navigation",
+      "common_buttons": "Common Buttons",
+      "search_field": "Search Field",
+      "technical_info": "Technical Information",
+      "system_details": "System Details",
+      "current_language": "Current Language",
+      "json_loaded": "JSON Loaded",
+      "available_languages": "Available Languages",
+      "translations_count": "Loaded Translations",
+      "operation_log": "Operation Log",
+      "console_loading": "Loading system...",
+      "dynamic_tests": "Dynamic Tests",
+      "add_content": "Add Content Dynamically",
+      "add_elements": "Add Elements",
+      "clear_elements": "Clear Elements",
+      "dynamic_element": "Dynamic Element"
+    },
+    "footer": {
+      "copyright": "© EPS v2 · Static layout for local navigation",
+      "tip": "Tip: use these HTMLs as navigable prototype; then integrate to EPS (PHP)."
+    }
+  },
+  "es": {
+    "common": {
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "back": "Volver",
+      "loading": "Cargando...",
+      "error": "Error",
+      "success": "Éxito",
+      "confirm": "Confirmar",
+      "close": "Cerrar",
+      "search": "Buscar",
+      "filter": "Filtrar",
+      "export": "Exportar",
+      "import": "Importar",
+      "add": "Añadir",
+      "remove": "Eliminar",
+      "warning": "Advertencia",
+      "info": "Información",
+      "language": "Idioma"
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "usuarios": "Usuarios",
+      "relatorios": "Reportes",
+      "configuracoes": "Configuraciones",
+      "sair": "Salir"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "diagnostico": "Diagnóstico",
+      "planejamento": "Planificación",
+      "comites": "Comités y Actas",
+      "kpis": "KPIs",
+      "feedback": "Feedback y Cultura",
+      "avaliacao": "Evaluación",
+      "modules": "Módulos"
+    },
+    "header": {
+      "title": "SEA v2",
+      "subtitle": "Implementación",
+      "language": "Idioma",
+      "user_menu": "Menú de usuario"
+    },
+    "pages": {
+      "dashboard": {
+        "title": "Dashboard",
+        "quick_access": "Acceso rápido",
+        "program_vision": "Visión del Programa",
+        "description": "SEA v2 guía la implementación de la Gestión Participativa y de Alto Rendimiento. Use los módulos al lado para avanzar en las etapas del método.",
+        "status": "Estado",
+        "pilot": "Piloto",
+        "start_diagnosis": "Comenzar por Diagnóstico"
+      },
+      "diagnostico": {
+        "title": "Diagnóstico Organizacional",
+        "objective": "Objetivo",
+        "objective_desc": "Evaluar la preparación cultural y estructural para la Gestión Participativa.",
+        "tools": "Herramientas",
+        "tools_list": [
+          "Encuesta de compromiso/clima",
+          "Análisis FODA",
+          "Entrevistas y 360° del liderazgo"
+        ],
+        "result": "Resultado",
+        "result_desc": "Plan de acción inicial priorizado por impacto × esfuerzo.",
+        "engagement": "Compromiso",
+        "leadership": "Liderazgo",
+        "structure": "Estructura",
+        "intermediate": "Intermedio",
+        "basic": "Básica",
+        "go_to_planning": "Ir a Planificación"
+      }
+    },
+    "test": {
+      "title": "Prueba Sistema Híbrido I18n",
+      "system_status": "Estado del Sistema",
+      "initialization": "Inicialización",
+      "json_loading": "Carga JSON",
+      "current_mode": "Modo Actual",
+      "attempting": "Intentando...",
+      "fallback_active": "Fallback Activo",
+      "initialized": "Inicializado",
+      "json_loaded_success": "JSON Cargado Exitosamente",
+      "using_fallback": "Usando Fallback",
+      "features_demo": "Demostración de Características",
+      "navigation": "Navegación",
+      "common_buttons": "Botones Comunes",
+      "search_field": "Campo de Búsqueda",
+      "technical_info": "Información Técnica",
+      "system_details": "Detalles del Sistema",
+      "current_language": "Idioma Actual",
+      "json_loaded": "JSON Cargado",
+      "available_languages": "Idiomas Disponibles",
+      "translations_count": "Traducciones Cargadas",
+      "operation_log": "Registro de Operaciones",
+      "console_loading": "Cargando sistema...",
+      "dynamic_tests": "Pruebas Dinámicas",
+      "add_content": "Agregar Contenido Dinámicamente",
+      "add_elements": "Agregar Elementos",
+      "clear_elements": "Limpiar Elementos",
+      "dynamic_element": "Elemento Dinámico"
+    },
+    "footer": {
+      "copyright": "© SEA v2 · Diseño estático para navegación local",
+      "tip": "Consejo: use estos HTMLs como prototipo navegable; luego integramos al SEA (PHP)."
+    }
+  }
+}

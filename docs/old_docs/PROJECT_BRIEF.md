@@ -9,6 +9,7 @@
 - **Estrutura:** `src/` (classes PSR-4), `resources/views/` (templates), `public/` (assets + entry point).
 - **Bootstrap:** unificado em `bootstrap/app.php` com helpers `url()` e `asset()`.
 - **Interface:** Bootstrap 5.3.3 + Font Awesome, design responsivo implementado.
+- **Protótipos:** ✅ Layouts navegáveis em `/prototype/` (dashboard, comitês, KPIs, etc.)
 - **Ambiente local:** `http://localhost/ser-v2/public/` funcional, redirecionamento em `/ser-v2/`.
 - **Banco:** scripts `01_schema_up_*`, `02_seed_data.sql` aplicados; `04_auth_mvp.sql` disponível.
 - **Auth MVP:** `Guard`, `ScopeMiddleware`, `MinutesPolicy` integrados em `src/Core/`.
@@ -49,29 +50,34 @@
 
 ## 4) Itens do MVP (escopo fechado)
 1. **Interface base:** ✅ Login responsivo + Header/Footer Bootstrap implementados
-2. **Autorização base (RBAC+ABAC):** ✅ Guard + Middleware + Policy para atas integrados
-3. **Atas:** listar, editar rascunho e **publicar** (`minutes.publish`) com auditoria
-4. **KPIs:** leitura (`kpi.read`) e lançamento (`kpi.write_reading`) com escopo por KPI
-5. **Páginas protegidas:** menu/rotas respeitando `Guard::can()` e policies 
-6. **Logs:** `audit_logs` em toda ação sensível (publish, parecer, kpi write)
-7. **Responsividade:** Todas as páginas funcionais em mobile/tablet/desktop
+2. **Protótipos:** ✅ Layouts navegáveis (dashboard, comitês, KPIs, diagnóstico, etc.)
+3. **Autorização base (RBAC+ABAC):** ✅ Guard + Middleware + Policy para atas integrados
+4. **Migração protótipos:** Converter HTMLs para views PHP funcionais
+5. **Atas:** listar, editar rascunho e **publicar** (`minutes.publish`) com auditoria
+6. **KPIs:** leitura (`kpi.read`) e lançamento (`kpi.write_reading`) com escopo por KPI
+7. **Páginas protegidas:** menu/rotas respeitando `Guard::can()` e policies 
+8. **Logs:** `audit_logs` em toda ação sensível (publish, parecer, kpi write)
+9. **Responsividade:** Todas as páginas funcionais em mobile/tablet/desktop
 
 ---
 
 ## 5) Próximos PRs (ordem sugerida)
-- **PR #1 — docs/deploy-guide**  
+- **PR #1 — feat/migrate-dashboard-prototype**  
+  Migrar `prototype/index.html` → `resources/views/pages/dashboard.php` + CSS para `public/assets/` + rotas funcionais.
+
+- **PR #2 — feat/migrate-comites-prototype**  
+  Migrar `prototype/comites.html` → views PHP + CRUD básico + integração com auth.
+
+- **PR #3 — feat/migrate-kpis-prototype**  
+  Migrar `prototype/kpis.html` → views PHP + leitura/lançamento + escopos `kpi:{id}`.
+
+- **PR #4 — feat/minutes-publish-endpoint**  
+  `POST /minutes/{id}/publish` (controller + update de status + `audit_logs`), botão no front.
+
+- **PR #5 — docs/deploy-guide**  
   `docs/deploy-production.md` + `/.env.production.example` (documentação de produção).
 
-- **PR #2 — feature/auth-mvp**  
-  `core/Auth/ActorContext.php`, `core/Auth/Guard.php`, `core/Http/ScopeMiddleware.php`, `core/Policies/MinutesPolicy.php`, SQL `04_auth_mvp.sql`, wire no bootstrap, exemplo de proteção de página.
-
-- **PR #3 — feat/minutes-publish-endpoint**  
-  `POST /minutes/{id}/publish` (controller + update de status + `audit_logs`), botão no front (visível se policy permitir), passos de validação com `curl`.
-
-- **PR #4 — feat/kpi-basic**  
-  leitura/lançamento inicial de KPIs, seeds de `kpi.*` e exemplo de escopo `kpi:{id}`.
-
-- **PR #5 — docs/troubleshoot-migration**  
+- **PR #6 — docs/troubleshoot-migration**  
   Checklist de diagnóstico para ambientes (Apache/Nginx/PHP/DB/hosts/DNS/logs).
 
 ---

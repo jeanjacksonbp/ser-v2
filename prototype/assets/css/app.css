@@ -1,0 +1,451 @@
+
+:root{
+  /* Paleta azul suave e sofisticada */
+  --ser-primary: #e0f2fe;      /* Azul muito claro */
+  --ser-secondary: #b3e5fc;    /* Azul suave */
+  --ser-accent: #81d4fa;       /* Azul médio suave */
+  --ser-dark: #0277bd;         /* Azul profundo mas suave */
+  --ser-gradient-start: #f0f9ff; /* Quase branco azulado */
+  --ser-gradient-end: #e0f7fa;   /* Verde-azul muito suave */
+  
+  /* Tons neutros complementares */
+  --ser-gray-light: #f8fafc;
+  --ser-gray-medium: #e2e8f0;
+  --ser-gray-dark: #475569;
+  --ser-text-primary: #1e293b;
+  --ser-text-secondary: #64748b;
+  --ser-sidebar-dark: #1e293b;
+  --ser-sidebar-darker: #334155;
+}
+body{
+  min-height:100vh;
+  background: #f1f5f9;
+  color: var(--ser-text-primary);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+.header-blur{
+  backdrop-filter: saturate(180%) blur(8px);
+  background-color: rgba(255,255,255,0.98);
+  border-bottom: 1px solid var(--ser-gray-medium);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+.sidebar{
+  background: linear-gradient(180deg, #e2e8f0, #cbd5e1);
+  min-height: calc(100vh - 72px);
+  border-right: 1px solid var(--ser-gray-medium);
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+/* Aplicar estado colapsado imediatamente se salvo no localStorage */
+.sidebar.preload-collapsed {
+  width: 60px !important;
+  min-width: 60px !important;
+  transition: none; /* Sem transição no carregamento inicial */
+}
+
+.sidebar.collapsed {
+  width: 60px !important;
+  min-width: 60px !important;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: var(--ser-secondary);
+  border: 1px solid var(--ser-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1050;
+  transition: all 0.2s ease;
+  color: var(--ser-dark);
+  font-size: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-toggle:hover {
+  background: var(--ser-accent);
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.card-ser{
+  background: rgba(255,255,255,0.95);
+  border: 1px solid var(--ser-gray-medium);
+  border-radius: 16px;
+  color: var(--ser-text-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+a, .nav-link{ 
+  color: var(--ser-text-secondary); 
+  text-decoration: none;
+}
+a:hover, .nav-link:hover{ 
+  color: var(--ser-dark);
+  transition: color 0.2s ease;
+}
+.btn-ser{
+  background: var(--ser-secondary);
+  color: var(--ser-dark);
+  border: 1px solid var(--ser-accent);
+  border-radius: 8px;
+  font-weight: 500;
+}
+.btn-ser:hover{ 
+  background: var(--ser-accent); 
+  color: var(--ser-dark);
+  border-color: var(--ser-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+.badge-ser{ 
+  background: var(--ser-accent); 
+  color: var(--ser-dark);
+  font-weight: 500;
+}
+.footer-note{ 
+  color: var(--ser-text-secondary); 
+  font-size: 0.875rem; 
+}
+/* Responsividade melhorada */
+@media (max-width: 991.98px){
+  .sidebar{ 
+    min-height: auto;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    border-radius: 8px;
+    border-right: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+  
+  .sidebar-toggle {
+    display: none; /* Esconder toggle no mobile */
+  }
+  
+  .sidebar.collapsed .nav-link .nav-text,
+  .sidebar.collapsed .text-uppercase,
+  .sidebar.collapsed .small {
+    opacity: 1; /* Mostrar textos no mobile */
+  }
+  
+  .main-content {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  .card-ser {
+    margin-bottom: 1rem;
+  }
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+/* Usar apenas tooltips nativos do navegador - mais confiáveis */
+
+/* Hamburger Menu para Mobile/Tablet */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  background: none;
+  border: none;
+  z-index: 1051;
+}
+
+.hamburger-menu span {
+  width: 20px;
+  height: 3px;
+  background: var(--ser-dark);
+  margin: 2px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Mobile/Tablet Styles */
+@media (max-width: 991.98px) {
+  /* Mostrar hamburger menu */
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  /* Ocultar toggle da sidebar desktop */
+  .sidebar-toggle {
+    display: none;
+  }
+  
+  /* Sidebar como overlay em mobile */
+  .sidebar {
+    position: fixed;
+    top: 72px;
+    left: -100%;
+    width: 280px !important;
+    height: calc(100vh - 72px);
+    z-index: 1049;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .sidebar.show {
+    left: 0;
+  }
+  
+  /* Main content ocupa toda largura em mobile */
+  .main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Overlay escuro quando sidebar está aberta */
+  .sidebar-overlay {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 72px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1048;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .sidebar {
+    padding: 1rem;
+  }
+  main {
+    padding: 1rem 0.75rem !important;
+  }
+  .fs-4 {
+    font-size: 1.1rem !important;
+  }
+}
+
+/* Melhorias de acessibilidade */
+.nav-link:focus,
+.btn:focus {
+  outline: 2px solid var(--ser-accent);
+  outline-offset: 2px;
+}
+
+/* Cores específicas para elementos do navbar */
+.navbar-brand {
+  color: var(--ser-dark) !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  color: var(--ser-text-secondary) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--ser-dark) !important;
+}
+
+.dropdown-menu {
+  background-color: rgba(255,255,255,0.98) !important;
+  border: 1px solid var(--ser-gray-medium);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-item {
+  color: var(--ser-text-primary) !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--ser-primary) !important;
+  color: var(--ser-dark) !important;
+}
+
+/* Estados de hover mais visíveis */
+.card-ser:hover {
+  background: rgba(255,255,255,1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+/* Estilos específicos do sidebar claro */
+.sidebar .text-uppercase {
+  color: var(--ser-text-secondary) !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sidebar .opacity-75 {
+  opacity: 0.7 !important;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Área de conteúdo principal */
+.main-content {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border-radius: 0;
+  box-shadow: -1px 0 4px rgba(0, 0, 0, 0.04);
+  min-height: calc(100vh - 72px);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.sidebar.collapsed + .main-content {
+  margin-left: 0;
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ser-accent), transparent);
+}
+
+/* Melhorias visuais adicionais */
+.navbar-toggler {
+  border: 1px solid var(--ser-gray-medium);
+  color: var(--ser-dark);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(2, 119, 189, 0.25);
+}
+
+.sidebar .nav-link {
+  border-radius: 8px;
+  margin-bottom: 4px;
+  padding: 0.75rem 1rem;
+  color: var(--ser-text-secondary) !important;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar .nav-link i {
+  min-width: 20px;
+  text-align: center;
+  margin-right: 0.5rem;
+  transition: margin 0.3s ease;
+}
+
+.sidebar .nav-link .nav-text {
+  transition: opacity 0.3s ease;
+  margin-left: 0;
+}
+
+.sidebar.collapsed .nav-link .nav-text,
+.sidebar.collapsed .text-uppercase,
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .small {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sidebar.collapsed .nav-link {
+  justify-content: flex-start !important;
+  align-items: center !important;
+  padding: 0.75rem 12px !important;
+  text-align: left !important;
+  display: flex !important;
+}
+
+/* Regras movidas para JavaScript inline para melhor controle */
+
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: var(--ser-dark) !important;
+  transform: translateX(2px);
+}
+
+.sidebar.collapsed .nav-link:hover {
+  transform: none;
+}
+
+.sidebar .nav-link.active {
+  background: linear-gradient(90deg, var(--ser-secondary), var(--ser-primary));
+  color: var(--ser-dark) !important;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(129, 212, 250, 0.2);
+}
+
+/* Melhorias para tabelas */
+.table {
+  color: var(--ser-text-primary);
+}
+
+.table thead th {
+  background-color: var(--ser-primary);
+  color: var(--ser-dark);
+  border-bottom: 1px solid var(--ser-gray-medium);
+}
+
+.table tbody tr:hover {
+  background-color: var(--ser-gray-light);
+}
+
+/* Melhorias para formulários */
+.form-control {
+  border: 1px solid var(--ser-gray-medium);
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  border-color: var(--ser-accent);
+  box-shadow: 0 0 0 0.2rem rgba(129, 212, 250, 0.25);
+}
+
+/* Estatísticas cards com cores suaves */
+.stats-card {
+  background: linear-gradient(135deg, var(--ser-primary), var(--ser-secondary));
+  border: none;
+  color: var(--ser-dark);
+}
+
+.stats-card .card-title {
+  color: var(--ser-dark);
+  font-weight: 600;
+}
+
+.stats-number {
+  color: var(--ser-dark);
+  font-weight: 700;
+}
